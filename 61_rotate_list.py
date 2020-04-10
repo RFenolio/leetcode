@@ -6,7 +6,7 @@ class ListNode:
 
 class Solution:
     def rotateRight(self, head: ListNode, k: int) -> ListNode:
-        if k == 0:
+        if k == 0 or head is None:
         	return head
         end = head
         newEnd = head
@@ -39,7 +39,7 @@ four.next = five
 
 s = Solution()
 res = s.rotateRight(one, 2)
-print(res.val)
+assert res.val == 4
 
 zero = ListNode(0)
 one = ListNode(1)
@@ -47,4 +47,4 @@ two = ListNode(2)
 zero.next = one
 one.next = two
 res2 = s.rotateRight(zero, 4)
-print(res2.val)
+assert res2.val == 2
