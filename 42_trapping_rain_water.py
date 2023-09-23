@@ -16,6 +16,4 @@ class Solution:
         peaks = zip(highest_left[::-1], highest_right, height)
         total_water = sum(min(l, r) - h for l, r, h in peaks)
         return total_water
-
-s = Solution()
-print(s.trap([0,1,0,2,1,0,1,3,2,1,2,1]))
+    
